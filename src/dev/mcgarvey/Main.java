@@ -2,6 +2,8 @@ package dev.mcgarvey;
 
 import java.util.Stack;
 
+import static java.lang.Math.pow;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -29,7 +31,7 @@ public class Main {
                     case '-' : s.push(-s.pop() + s.pop()); break;
                     case '*' : s.push(s.pop() * s.pop()); break;
                     case '/' : s.push(1 / s.pop() * s.pop()); break;
-                    /// add sin cos tan arcTan arcCos arcTan
+                    case '^' : s.push(pow(s.pop(),s.pop())); break;
                 }
             } else if(Character.isDigit(currentChar)){
                 //numbers get pushed to the stack
